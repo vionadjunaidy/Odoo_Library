@@ -7,3 +7,9 @@ class LibraryBook(models.Model):
     name = fields.Char(string='Title', required=True)
     author_id = fields.Many2one('library.author', string='Author')
     price = fields.Float(string='Price')
+
+    @api.constrains('price')
+    def _check_price(self):
+        for book in self:
+            if book.price < 0:
+                raise models.ValidationError("The price of the book cannot be negative.")
