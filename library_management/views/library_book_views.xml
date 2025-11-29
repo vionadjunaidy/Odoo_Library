@@ -9,6 +9,9 @@
                         <field name="name"/>
                         <field name="author_id"/>
                         <field name="price"/>
+                        <field name="category_id"/>
+                        <field name="isbn"/>
+                        <field name="publish_year"/>
                     </group>
                 </sheet>
             </form>
@@ -23,6 +26,9 @@
                 <field name="name"/>
                 <field name="author_id"/>
                 <field name="price"/>
+                <field name="category_id"/>
+                <field name="isbn"/>
+                <field name="publish_year"/>
             </tree>
         </field>
     </record>
